@@ -5,10 +5,16 @@ br = conectviva.realizarconexion()
 respuesta = br.open('https://www.vivaaerobus.com/mx')
 conectviva.generararchivo(respuesta.read(),'prueba1.txt')
 #obtengo la forma
-#for form in br.forms():
-#	print form
-forma=br.select_form(nr=0)
-print forma.name
+br.select_form(nr=0)
+print br.form
+#print br.form['DepartureCity']
+
+#control = br.form["DepartureCity"]
+
+
+
+#for item in control.items:
+#	print item.name
 
 #obtengo el campo de origen
 
